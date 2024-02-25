@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import {Button, Alert, Table} from 'react-bootstrap';
+import MyTable from "./Components/MyTable";
+import './CSS/styles.css';
+import User from "./Components/User";
+import StrongAbbat from "./Components/StrongAbbat";
+import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import Login from "./Components/Login";
+import Outsider from "./Components/Outsider";
+import WeakAbbat from "./Components/WeakAbbat";
+import Elected from "./Components/Elected";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+const App = () => {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/signup" element={<Login/>} />
+                <Route path="/user" element={<User/>} />
+                <Route path="/abbat/strong" element={<StrongAbbat/> } />
+                <Route path="/outsider" element={<Outsider/>} />
+                <Route path="/abbat" element={<WeakAbbat/>} />
+                <Route path="/user/elected" element={<Elected/>} />
+                <Route path="/" element={<Login/>} />
+            </Routes>
+        </BrowserRouter>
+    );
+};
 export default App;

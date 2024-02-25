@@ -1,0 +1,66 @@
+.form-wrapper {
+    text-align: center;
+}
+
+.form-wrapper h2 {
+    margin-bottom: 30px; /* Увеличиваем отступ над заголовком */
+    margin-top: 30px;
+}
+
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group .label-name {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.input-group input:focus ~ .label-name,
+.input-group input:valid ~ .label-name {
+    top: -20px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.label-name1 {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+    top: -20px;
+    font-size: 14px;
+    color: #007bff;
+}
+.auth-form-background {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.1); /* Измените цвет фона и прозрачность по вашему усмотрению */
+    padding: 20px; /* Добавьте отступы, чтобы блок был отделен от внешнего контейнера */
+    border-radius: 10px; /* Добавьте скругление углов, чтобы сделать блок более приятным для глаза */
+}
+p{
+    font-size: 16px;
+}
+.signUp-link{
+    margin-top: 20px;
+}
+
+
